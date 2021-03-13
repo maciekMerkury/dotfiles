@@ -1,0 +1,51 @@
+add_newline = false
+scan_timeout = 16
+format = """
+[\\[](cyan)$username%$hostname[\\]](cyan)$directory($git_status)($git_branch)($git_state)
+($cmd_duration)$character"""
+
+
+[line_break]
+disabled = false
+
+
+[character]
+use_symbol_for_status = true
+success_symbol = "[> ](bold green)"
+error_symbol = "[x ](bold red)"
+
+
+[directory]
+disabled = false
+read_only_style = "bold red"
+style = "cyan"
+
+
+[username]
+disabled = false
+show_always = true
+tyle_root = "red bold"
+style_user = "blue"
+format = "[$user]($style)"
+
+
+[hostname]
+disabled = false
+show_always = true
+ssh_only = false
+format = "[$hostname](purple)"
+
+
+[cmd_duration]
+min_time = 4_000
+show_notifications = true
+min_time_to_notify = 120_000
+format = "[$duration](bold yellow) "
+
+
+[time]
+disabled = true
+
+[git_status]
+conflicted = "X(bold red)"
+

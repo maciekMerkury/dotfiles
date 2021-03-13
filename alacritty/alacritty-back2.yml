@@ -1,0 +1,64 @@
+# config for alacritty
+
+window:
+  # dimensions of the window measured in colums/lines (changes require restart)
+  dimensions:
+    columns: 90
+    lines: 25
+  
+  # possible values:
+  #  - Windowed
+  #  - Maximized
+  #  - Fullscreen
+  startup_mode: Windowed
+  
+  # possible values:
+  #  - full
+  #  - none
+  #  - transparent
+  #  - buttonless
+  decorations: full 
+
+font:
+  normal:
+    family: Noto Sans Mono
+    style: Light
+  bold:
+    family: Noto Sans Mono
+    style: Medium
+  italic:
+    family: Noto Sans Mono
+    style: "Thin"
+
+  size: 11.5
+
+
+# colours
+colors:
+
+  # Default colours
+  primary:
+    background: '0x292d3e'
+    foreground: '0xd0d0d0'
+
+  # Normal colours
+  normal:
+    black:   '0x292d3e'
+    red:     '0xf07178'
+    green:   '0xc3e88d'
+    yellow:  '0xffcb6b'
+    blue:    '0x82aaff'
+    magenta: '0xc792ea'
+    cyan:    '0x89ddff'
+    white:   '0xd0d0d0'
+
+  # Bright colours
+  bright:
+    black:   '0x434758'
+    red:     '0xff8b92'
+    green:   '0xddffa7'
+    yellow:  '0xffe585'
+    blue:    '0x9cc4ff'
+    magenta: '0xe1acff'
+    cyan:    '0xa3f7ff'
+    white:   '0xffffff'

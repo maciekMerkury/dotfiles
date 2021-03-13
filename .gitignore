@@ -1,2 +1,20 @@
-*
+# ignore everything by default, but if a directory is whitelisted the entire content becomes whitelisted
+/*
+
+# in order to add something to the git repo, just whitelist it
 !.gitignore
+
+!/neofetch
+
+!/nvim
+/nvim/plugged/*
+/nvim/.netrwhist
+
+!/starship
+!/starship.toml
+
+!/alacritty
+
+!/bashtop
+
+!/fish
