@@ -3,7 +3,7 @@
 
 # in order to add something to the git repo, just whitelist it
 !.gitignore
-
+!LICENSE
 !/neofetch
 
 !/nvim
