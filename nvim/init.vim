@@ -17,10 +17,10 @@ Plug 'autozimu/LanguageClient-neovim', {
 
 call plug#end()
 
-set tabstop     =4 " Width of tab character
-set softtabstop =4 " Fine tunes the amount of white space to be added
-set shiftwidth  =4 " Determines the amount of whitespace to add in normal mode
-set expandtab      " When this option is enabled, vi will use spaces instead of tabs
+set tabstop         =4 " Width of tab character
+set softtabstop     =4 " Fine tunes the amount of white space to be added
+set shiftwidth      =4 " Determines the amount of whitespace to add in normal mode
+set expandtab       " When this option is enabled, vi will use spaces instead of tabs
 
 
 let g:asyncomplete_auto_popup = 1
