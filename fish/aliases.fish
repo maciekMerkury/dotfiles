@@ -12,7 +12,8 @@ alias pacs="doas pacman -S --needed"
 alias pacr="doas pacman -R "
 
 # paru aliases
-alias paru="paru -Sua"
+# does not work btw, would have to alter the source code to make it work in the pog way
+#alias paru="paru -Sua"
 
 # shutdown aliases
 alias dobranoc="echo 'dobranoc Maciek' ; shutdown now"
