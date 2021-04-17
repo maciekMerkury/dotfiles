@@ -6,3 +6,35 @@ New instance of bashtop version: 0.9.25 Pid: 16260
 New instance of bashtop version: 0.9.25 Pid: 21514
  
 New instance of bashtop version: 0.9.25 Pid: 30639
+ 
+New instance of bashtop version: 0.9.25 Pid: 41217
+stty: 'standard input': Input/output error
+ 
+New instance of bashtop version: 0.9.25 Pid: 23395
+18:31:26 ERROR: On line 4353 
+ 
+New instance of bashtop version: 0.9.25 Pid: 248296
+ 
+New instance of bashtop version: 0.9.25 Pid: 378589
+18:11:57 ERROR: On line 4353 
+ 
+New instance of bashtop version: 0.9.25 Pid: 18210
+ 
+New instance of bashtop version: 0.9.25 Pid: 64124
+ 
+New instance of bashtop version: 0.9.25 Pid: 65949
+ 
+New instance of bashtop version: 0.9.25 Pid: 167849
+ 
+New instance of bashtop version: 0.9.25 Pid: 247756
+ 
+New instance of bashtop version: 0.9.25 Pid: 49393
+ 
+New instance of bashtop version: 0.9.25 Pid: 582491
+ 
+New instance of bashtop version: 0.9.25 Pid: 4350
+ 
+New instance of bashtop version: 0.9.25 Pid: 3489
+ 
+New instance of bashtop version: 0.9.25 Pid: 12792
+/usr/bin/bashtop: line 2411: /proc/66484/stat: No such file or directory
