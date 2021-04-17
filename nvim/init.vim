@@ -49,7 +49,14 @@ Plug 'vim-airline/vim-airline-themes' " themes for vim-airline
 
 Plug 'dracula/vim', { 'as': 'dracula' } " theme
 
+<<<<<<< HEAD
 Plug 'arzg/vim-colors-xcode'
+=======
+set tabstop         =4 " Width of tab character
+set softtabstop     =4 " Fine tunes the amount of white space to be added
+set shiftwidth      =4 " Determines the amount of whitespace to add in normal mode
+set expandtab       " When this option is enabled, vi will use spaces instead of tabs
+>>>>>>> a49f8066174f760ef917a0c9932e7c6a45e81f59
 
 "Plug 'nightsense/cosmic_latte'
 
