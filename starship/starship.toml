@@ -10,7 +10,7 @@ disabled = false
 
 
 [character]
-use_symbol_for_status = true
+#use_symbol_for_status = true
 success_symbol = "[> ](bold green)"
 error_symbol = "[x ](bold red)"
 
@@ -24,14 +24,14 @@ style = "cyan"
 [username]
 disabled = false
 show_always = true
-tyle_root = "red bold"
+style_root = "red bold"
 style_user = "blue"
 format = "[$user]($style)"
 
 
 [hostname]
 disabled = false
-show_always = true
+#show_always = true
 ssh_only = false
 format = "[$hostname](purple)"
 
