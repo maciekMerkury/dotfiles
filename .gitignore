@@ -15,6 +15,6 @@
 !/alacritty
 
 !/bashtop
-bashtop/*.log
+/**/*.log
 
 !/fish
