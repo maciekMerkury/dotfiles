@@ -6,6 +6,8 @@ set fish_greeting ""
 # adds the binaries installed by "cargo install" to path
 set -xa PATH ~/.cargo/bin
 
+# exports nvim as default editor
+set -x EDITOR /usr/bin/nvim
 
 # sources aliases
 source ~/.config/fish/aliases.fish
