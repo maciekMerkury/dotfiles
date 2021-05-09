@@ -20,8 +20,8 @@ source ~/.config/fish/functions.fish
 # $1 == 2 -> prints a message if directory does not exist
 # $1 == 3 -> 1 & 2 combined
 # default($1) -> prints nothing
-# you can uncomment it if you feel the need to, but be default it really should remain forgotten
-#~/Programming/Shells/quick-fix-tm.bash
+# this is a somewhat dumb fix, but it allows you to specify whether you want the fix or not while working somewhat nicely with git
+[ -z ~/.config/fish/enable_fix.fish ] || ~/Programming/Shells/quick-fix-tm.bash
 
 # start starship prompt
 #export STARSHIP_CONFIG=~/.config/starship/
