@@ -17,7 +17,7 @@ window:
   #  - none
   #  - transparent
   #  - buttonless
-  decorations: full 
+  decorations: none
 
 font:
   normal:
@@ -32,32 +32,45 @@ font:
 
   size: 11.5
 
+schemes:
+  one_dark: &dark
+    primary:
+      background: '#282c34'
+      foreground: '#abb2bf'
+    cursor:
+      text:       CellBackground
+      cursor:     '#528bff' # syntax-cursor-color
+    selection:
+      text:       CellForeground
+      background: '#3e4451' # syntax-selection-color
+    normal:
+      black:      '#5c6370' # mono-3
+      red:        '#e06c75' # red 1
+      green:      '#98c379'
+      yellow:     '#e5c07b' # orange 2
+      blue:       '#61afef'
+      magenta:    '#c678dd'
+      cyan:       '#56b6c2'
+      white:      '#828997' # mono-2
+  one_light: &light
+    primary:
+      background: '#fafafa'
+      foreground: '#383a42'
+    cursor:
+      text:       CellBackground
+      cursor:     '#526eff' # syntax-cursor-color
+    selection:
+      text:       CellForeground
+      background: '#e5e5e6' # syntax-selection-color
+    normal:
+      black:      '#696c77' # mono-2
+      red:        '#e45649' # red 1
+      green:      '#50a14f'
+      yellow:     '#c18401' # orange 2
+      blue:       '#4078f2'
+      magenta:    '#a626a4'
+      cyan:       '#0184bc'
+      white:      '#a0a1a7' # mono-3
 
-# colours
-colors:
-  # Default colors
-  primary:
-    background: '0x282a36'
-    foreground: '0xf8f8f2'
- 
-  # Normal colors
-  normal:
-    black:   '0x000000'
-    red:     '0xff5555'
-    green:   '0x50fa7b'
-    yellow:  '0xf1fa8c'
-    blue:    '0xbd93f9'
-    magenta: '0xff79c6'
-    cyan:    '0x8be9fd'
-    white:   '0xbbbbbb'
- 
-  # Bright colors
-  bright:
-    black:   '0x555555'
-    red:     '0xff5555'
-    green:   '0x50fa7b'
-    yellow:  '0xf1fa8c'
-    blue:    '0xcaa9fa'
-    magenta: '0xff79c6'
-    cyan:    '0x8be9fd'
-    white:   '0xffffff'
+# you can just change it to light/dark 
+colors: *dark
