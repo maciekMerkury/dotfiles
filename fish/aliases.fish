@@ -18,3 +18,9 @@ alias pacr="doas pacman -R "
 # shutdown aliases
 alias dobranoc="echo 'dobranoc Maciek' ; shutdown now"
 alias noc="shutdown 0"
+
+# app launching aliases
+alias todo="nvim ~/todo"
+#alias vifzf="nvim (fzf)"
+#alias fzfvi="nvim (fzf)"
+
