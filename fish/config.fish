@@ -15,7 +15,7 @@ source ~/.config/fish/aliases.fish
 # source functions
 source ~/.config/fish/functions.fish
 
-# it's a dirty fix for the crappy directory being created in home
+# it's a dirty fix for the crappy directory being created in $HOME on one of my devices
 # $1 == 1 -> prints pwd
 # $1 == 2 -> prints a message if directory does not exist
 # $1 == 3 -> 1 & 2 combined
