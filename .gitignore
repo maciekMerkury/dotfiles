@@ -16,5 +16,6 @@
 
 !/bashtop
 /**/*.log
+/**/.idea/
 
 !/fish
