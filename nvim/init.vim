@@ -31,10 +31,10 @@ nnoremap    <C-A-l> <C-W><C->>
 nnoremap    <C-A-h> <C-W><C-<> 
 
 " changing the keybindings for moving between tabs
-nnoremap  <A-l>    gt
-nnoremap  <A-h>    gT 
-nnoremap  <A-j>    gt
-nnoremap  <A-k>    gT
+nnoremap  <A-l>     gt
+nnoremap  <A-h>     gT 
+nnoremap  <A-j>     gt
+nnoremap  <A-k>     gT
 
 " nvim terminal keybindings (also applicable to gnvim)
 tnoremap  <Esc>    <C-\><C-n>  " maps Esc to escaping the input of the terminal
@@ -49,7 +49,9 @@ if exists("g:gnvim") " gnvim-only settings
     Plug 'scrooloose/nerdtree' |
                 \ Plug 'Xuyuanp/nerdtree-git-plugin'
 
-    Plug 'neoclide/coc.nvim', {'branch': 'release'} " Completion engine
+
+
+    "Plug 'neoclide/coc.nvim', {'branch': 'release'} " Completion engine
   call plug#end()
 
   " NERDTree keybindings
@@ -87,7 +89,7 @@ if exists("g:all_plugins_for_debug_and_stuff")
     Plug 'scrooloose/nerdtree' |
                 \ Plug 'Xuyuanp/nerdtree-git-plugin'
 
-    Plug 'neoclide/coc.nvim', {'branch': 'release'} " Completion engine
+    "Plug 'neoclide/coc.nvim', {'branch': 'release'} " Completion engine
 
   call plug#end()
 endif
