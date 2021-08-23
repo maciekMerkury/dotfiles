@@ -24,3 +24,7 @@ alias todo="nvim ~/todo"
 #alias vifzf="nvim (fzf)"
 #alias fzfvi="nvim (fzf)"
 
+
+# update aliases
+alias update="echo 'pacman' && doas pacman -Syu && echo 'paru -Sua' && paru && echo 'rustup' && rustup update"
+
