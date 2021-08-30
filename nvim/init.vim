@@ -1,4 +1,4 @@
-" this will be the new config, incorporating both nvim and gnvim
+" this will be the new config, for both nvim and gnvim
 
 " colours magic thing
 if exists('+termguicolors')
@@ -19,7 +19,7 @@ set expandtab        " when this is enabled, vi will use spaces instead of tabs
 set smartindent      " auto indentation 
 
 " changing the keybindings to move between splits
-nnoremap  <C-j>    <C-W><C-J>
+nnoremap  <C-J>    <C-W><C-J>
 nnoremap  <C-K>    <C-W><C-K>
 nnoremap  <C-L>    <C-W><C-L>
 nnoremap  <C-H>    <C-W><C-H> 
@@ -49,8 +49,6 @@ if exists("g:gnvim") " gnvim-only settings
     Plug 'scrooloose/nerdtree' |
                 \ Plug 'Xuyuanp/nerdtree-git-plugin'
 
-
-
     "Plug 'neoclide/coc.nvim', {'branch': 'release'} " Completion engine
   call plug#end()
 
@@ -59,7 +57,7 @@ if exists("g:gnvim") " gnvim-only settings
   
 else " standard nvim settings
 
-  call plug#begin() " plugins for standard nvim
+  call plug#begin() " plugins only for standard nvim
   call plug#end()
 
 endif
@@ -74,7 +72,7 @@ call plug#begin()
   Plug 'sheerun/vim-polyglot' " syntax highlighting for many lankuages
 call plug#end()
 
-if exists("g:all_plugins_for_debug_and_stuff")
+if exists("g:enable_all_plugins")
   call plug#begin()
     Plug 'morhetz/gruvbox' " gruvbox theme
     Plug 'rakr/vim-one', { 'as': 'one' } " onedark theme
