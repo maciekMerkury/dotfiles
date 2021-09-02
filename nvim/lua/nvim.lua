@@ -1,0 +1,2 @@
+print("nvim config sourced")
+

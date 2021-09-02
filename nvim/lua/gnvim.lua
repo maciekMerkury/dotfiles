@@ -1,0 +1,3 @@
+
+print("gnvim config sourced")
+
