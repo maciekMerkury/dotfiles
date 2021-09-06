@@ -11,10 +11,6 @@ alias pacu="doas pacman -Syu --needed"
 alias pacs="doas pacman -S --needed"
 alias pacr="doas pacman -R "
 
-# paru aliases
-# does not work btw, would have to alter the source code to make it work in the pog way
-#alias paru="paru -Sua"
-
 # shutdown aliases
 alias dobranoc="echo 'dobranoc Maciek' ; shutdown now"
 alias noc="shutdown 0"
@@ -26,5 +22,8 @@ alias todo="nvim ~/todo"
 
 
 # update aliases
-alias update="echo 'pacman' && doas pacman -Syu && echo 'paru -Sua' && paru && echo 'rustup' && rustup update"
+alias update="echo 'pacman -Syu:' && doas pacman -Syu && echo 'paru -Sua:' && paru && echo 'rustup update:' && rustup update"
+
+# python aliases
+alias pajton=python
 
