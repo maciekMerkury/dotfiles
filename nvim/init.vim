@@ -64,12 +64,14 @@ endif
 
 " plugins for all of
 call plug#begin()
+  "Plug 'rhysd/vim-grammarous'
   Plug 'morhetz/gruvbox' " gruvbox theme
   Plug 'rakr/vim-one', { 'as': 'one' } " onedark theme
 
   Plug 'vim-airline/vim-airline' " improved bottom line of vim
 
   Plug 'sheerun/vim-polyglot' " syntax highlighting for many lankuages
+  Plug 'neovim/nvim-lspconfig'
 call plug#end()
 
 if exists("g:enable_all_plugins")
@@ -102,6 +104,35 @@ let g:gruvbox_contrast_light='hard'
 set background=dark
 colorscheme gruvbox
 let g:airline_theme='gruvbox'
+
+lua require'lspconfig'.rust_analyzer.setup({})
+
+" lspconfig stuff
+"lua << EOF
+"local nvim_lsp = require'lspconfig'
+"
+"local on_attach = function(client)
+"    require'completion'.on_attach(client)
+"end
+"
+"nvim_lsp.rust_analyzer.setup({
+"    on_attach=on_attach,
+"    settings = {
+"        ["rust-analyzer"] = {
+"            assist = {
+"                importGranularity = "module",
+"                importPrefix = "by_self",
+"            },
+"            cargo = {
+"                loadOutDirsFromCheck = true
+"            },
+"            procMacro = {
+"                enable = true
+"            },
+"        }
+"    }
+"})
+"EOF
 
 
 
