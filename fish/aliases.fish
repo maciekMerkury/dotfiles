@@ -11,12 +11,13 @@ alias pacu="doas pacman -Syu --needed"
 alias pacs="doas pacman -S --needed"
 alias pacr="doas pacman -R "
 
+
 # shutdown aliases
 alias dobranoc="echo 'dobranoc Maciek' ; shutdown now"
 alias noc="shutdown 0"
 
 # app launching aliases
-alias todo="nvim ~/todo"
+alias todo="nvim ~/todo.txt"
 #alias vifzf="nvim (fzf)"
 #alias fzfvi="nvim (fzf)"
 
