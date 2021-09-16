@@ -7,6 +7,10 @@ if exists('+termguicolors')
   set termguicolors
 endif
 
+" make it so words are not split in the middle when they cannot fit onto the
+" screen in their entirety
+set linebreak
+
 set number
 syntax on
 set mouse=a
