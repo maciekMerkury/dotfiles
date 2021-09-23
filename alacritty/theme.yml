@@ -131,5 +131,5 @@ schemes:
 
 
 # you can just change it to one_(light/dark)
-colors: *one_dark
+colors: *gruv_material_dark
 
