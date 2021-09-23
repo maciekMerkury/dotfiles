@@ -20,6 +20,7 @@ alias noc="shutdown 0"
 alias todo="nvim ~/todo.txt"
 #alias vifzf="nvim (fzf)"
 #alias fzfvi="nvim (fzf)"
+alias clock="tty-clock -sScbtn"
 
 
 # update aliases
