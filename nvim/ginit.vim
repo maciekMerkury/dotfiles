@@ -1,25 +1,6 @@
-" Enable Mouse
-set mouse=a
-
-plug#begin()
-
-Plug 'neovim/nvim-lspconfig'
-Plug 'simrat39/rust-tools.nvim'
-
-" Optional dependencies
-Plug 'nvim-lua/popup.nvim'
-Plug 'nvim-lua/plenary.nvim'
-Plug 'nvim-telescope/telescope.nvim'
-
-" Debugging (needs plenary from above as well)
-Plug 'mfussenegger/nvim-dap'
-
-Plug#end()
-
 " Set Editor Font
 if exists(':GuiFont')
     " Use GuiFont! to ignore font errors
-    GuiFont {font_name}:h{size}
 endif
 
 " Disable GUI Tabline
