@@ -2,7 +2,7 @@ set shell=/bin/bash
 
 set nocompatible
 " idk
-filetype off
+"filetype off
 " idk tho
 "set rtp+=~/dev/others/base16/templates/vim
 
@@ -44,6 +44,8 @@ nnoremap <silent> <A-k>     gT
 " nvim terminal keybindings (also applicable to gnvim)
 tnoremap <silent> <Esc>     <C-\><C-n>  " maps Esc to escaping the input of the terminal
 
+let mapleader = ","
+
 
 " Plugins
 call plug#begin()
@@ -57,9 +59,11 @@ call plug#begin()
   Plug 'ciaranm/securemodelines'
   Plug 'editorconfig/editorconfig-vim'
   Plug 'justinmk/vim-sneak'
+  Plug 'wesQ3/vim-windowswap'
 
   if exists("g:qtnvim")
     Plug 'junegunn/fzf' " well, this is fzf
+
 
     " vscode-like file-tree and integration of git into it
     Plug 'scrooloose/nerdtree' |
@@ -69,6 +73,7 @@ call plug#begin()
     Plug 'neovim/nvim-lspconfig'
     Plug 'nvim-lua/lsp_extensions.nvim'
     Plug 'nvim-lua/completion-nvim'
+    "Plug 'neovim/ft_rust'
 
     " language support
     Plug 'cespare/vim-toml'
@@ -91,6 +96,12 @@ let g:airline_theme='gruvbox'
 
 if exists("g:qtnvim")
 
+  " folding blocks in rust
+  " 0 => no folding
+  " 1 => folding, all folds opened by default
+  " 2 => folding, all folds closed by default
+  let g:rust_fold = 2
+
   " LSP configuration
   lua << END
   local lspconfig = require('lspconfig')
@@ -109,7 +120,7 @@ if exists("g:qtnvim")
     buf_set_keymap('n', 'gd', '<Cmd>lua vim.lsp.buf.definition()<CR>', opts)
     buf_set_keymap('n', 'K', '<Cmd>lua vim.lsp.buf.hover()<CR>', opts)
     buf_set_keymap('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', opts)
-    buf_set_keymap('n', '<C-k>', '<cmd>lua vim.lsp.buf.signature_help()<CR>', opts)
+    buf_set_keymap('n', '<C-A-k>', '<cmd>lua vim.lsp.buf.signature_help()<CR>', opts)
     buf_set_keymap('n', '<space>D', '<cmd>lua vim.lsp.buf.type_definition()<CR>', opts)
     buf_set_keymap('n', '<space>rn', '<cmd>lua vim.lsp.buf.rename()<CR>', opts)
     buf_set_keymap('n', '<space>a', '<cmd>lua vim.lsp.buf.code_action()<CR>', opts)
@@ -155,4 +166,10 @@ set cmdheight=2
 set updatetime=300
 
 endif " g:qtnvim
+
+
+nnoremap <silent> <C-J>     <C-W><C-J>
+nnoremap <silent> <C-K>     <C-W><C-K>
+nnoremap <silent> <C-L>     <C-W><C-L>
+nnoremap <silent> <C-H>     <C-W><C-H> 
 
