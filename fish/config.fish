@@ -21,7 +21,7 @@ source ~/.config/fish/functions.fish
 # $1 == 3 -> 1 & 2 combined
 # default($1) -> prints nothing
 # this is a somewhat dumb fix, but it allows you to specify whether you want the fix or not while working somewhat nicely with git
-[ -z ~/.config/fish/enable_fix.fish ] || ~/Programming/Shells/quick-fix-tm.bash
+# [ -z ~/.config/fish/enable_fix.fish ] || ~/Programming/Shells/quick-fix-tm.bash
 
 # start starship prompt
 #export STARSHIP_CONFIG=~/.config/starship/
