@@ -1,5 +1,8 @@
 # config for alacritty
 
+env:
+  TERM: xterm-256color
+
 window:
   # dimensions of the window measured in colums/lines (changes require restart)
   dimensions:

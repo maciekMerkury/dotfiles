@@ -1,17 +1,13 @@
 set shell=/bin/bash
 
-set nocompatible
+"set nocompatible
 " idk
 "filetype off
 " idk tho
 "set rtp+=~/dev/others/base16/templates/vim
 
-" colours magic thing
-if exists('+termguicolors')
-  let &t_8f="\<Esc>[38;2;%lu;%lu;%lum"
-  let &t_8b="\<Esc>[48;2;%lu;%lu;%lum"
-  set termguicolors
-endif
+" set fancy colours
+set termguicolors
 
 " make it so words are not split in the middle when they cannot fit onto the
 " screen in their entirety
@@ -160,7 +156,7 @@ END
 " menuone: popup even when there's only one match
 " noinsert: Do not insert text until a selection is made
 " noselect: Do not select, force user to select one from the menu
-set completeopt=menuone,noinsert,noselect
+set completeopt=menuone
 " Better display for messages
 set cmdheight=2
 " You will have bad experience for diagnostic messages when it's default 4000.
