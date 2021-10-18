@@ -3,6 +3,11 @@
 # shut up the greeting
 set fish_greeting ""
 
+if status is-interactive
+and not set -q TMUX
+    exec tmux
+end
+
 # adds the binaries installed by "cargo install" to path
 set -xa PATH ~/.cargo/bin
 
