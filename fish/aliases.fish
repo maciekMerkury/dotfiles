@@ -1,9 +1,18 @@
+# NOTE: this might be deprecated, as i'm thinking about switching from ls to exa, becuase it's pretty
 # ls aliases
-alias l="ls -CF"
-alias la="ls -CFA"
-alias laa="ls -CFa"
-alias ll="ls -lAh"
-alias lla="ls -la"
+#alias l="ls -CF"
+#alias la="ls -CFA"
+#alias laa="ls -CFa"
+#alias ll="ls -lAh"
+#alias lla="ls -la"
+
+# exa aliases
+alias l="exa -F"
+alias la="exa -Fa"
+alias laa="exa -Faa"
+alias ll="exa -lab"
+alias lla="exa -laab"
+alias llr="exa -labT"
 
 # pacman aliases
 #alias pacrm="doas pacman -Qtdq | doas pacman -Rns -"
