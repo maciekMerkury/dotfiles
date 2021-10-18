@@ -27,6 +27,7 @@ alias noc="shutdown 0"
 
 # app launching aliases
 alias todo="nvim ~/todo.txt"
+alias temp="nvim ~/.temp.txt"
 #alias vifzf="nvim (fzf)"
 #alias fzfvi="nvim (fzf)"
 alias clock="tty-clock -scbt"
