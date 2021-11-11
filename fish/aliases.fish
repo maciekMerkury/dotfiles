@@ -34,7 +34,7 @@ alias clock="tty-clock -scbt"
 
 
 # update aliases
-alias update="echo 'pacman -Syu:' && doas pacman -Syu && echo 'paru -Sua:' && paru && echo 'rustup update:' && rustup update"
+alias update="echo 'pacman -Syu:' && doas pacman -Syu && echo 'paru -Sua:' && paru && echo 'rustup update:' && rustup update && tldr --update"
 
 # python aliases
 alias pajton=python
