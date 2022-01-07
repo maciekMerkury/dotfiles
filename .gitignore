@@ -10,8 +10,6 @@
 /nvim/plugged/*
 /nvim/.netrwhist
 
-!/starship
-
 !/alacritty
 
 /**/*.log
