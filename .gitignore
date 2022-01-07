@@ -2,6 +2,7 @@
 #/**/*
 /*
 
+
 # in order to add something to the git repo, just whitelist it
 !.gitignore
 !LICENSE
@@ -12,9 +13,13 @@
 
 !/alacritty
 
-/**/*.log
-/**/.idea/
 
 !/ranger
 
 !/tmux
+
+!brave-flags.conf
+!chromium-flags.conf
+
+/**/*.log
+/**/.idea/
