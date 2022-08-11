@@ -26,9 +26,13 @@ call plug#begin()
   " vscode-like file-tree
   Plug 'scrooloose/nerdtree'
 
+  " brackets and stuff
+  Plug 'max-0406/autoclose.nvim'
+
   " syntax highlighting
   Plug 'sheerun/vim-polyglot'
   Plug 'gentoo/gentoo-syntax'
+
 
   Plug 'lotabout/skim', { 'dir': '~/.skim', 'do': './install' }
 
