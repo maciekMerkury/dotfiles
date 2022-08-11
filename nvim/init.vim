@@ -67,6 +67,11 @@ set background=dark
 colorscheme onedarkhc
 let g:airline_theme='onedark'
 
+augroup project
+  autocmd!
+  autocmd BufRead,BufNewFile *.S,*.s set filetype=asm
+augroup END
+
 if exists("g:hvim")
 lua require("fidget").setup()
 lua require("trouble").setup()
