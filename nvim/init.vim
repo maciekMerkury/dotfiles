@@ -89,7 +89,7 @@ local opts = {
   -- rust-tools options
   tools = {
     autoSetHints = true,
-    hover_with_actions = true,
+    --hover_with_actions = true,
     inlay_hints = {
       show_parameter_hints = true,
       parameter_hints_prefix = "",
@@ -105,12 +105,14 @@ local opts = {
           importPrefix = "crate"
           },
         cargo = {
-          allFeatures = true
+          allFeatures = true,
+          --unsetTest = {"core", "crate"}
           },
         checkOnSave = {
+          allTargets = false,
           --default: `cargo check`
-          --command = "cargo check"
-          -- command = "clippy"
+          --command = 'cargo check'
+          --command = "clippy"
           },
         },
         inlayHints = {
@@ -141,7 +143,7 @@ nnoremap <silent> <A-k>     gt
 " escape in the nvim terminal
 tnoremap <silent> <Esc>     <C-\><C-n> 
 
-nnoremap <silent> <S-e> :NERDTreeToggle<CR>
+nnoremap <silent> <S-e>     :NERDTreeToggle<CR>
 
 if exists("g:hvim")
   nnoremap <silent> K         <cmd>lua vim.lsp.buf.hover()<CR>
@@ -159,6 +161,8 @@ if exists("g:hvim")
   nnoremap <silent> ]s        <cmd>lua vim.diagnostic.show()<CR>
   " hide all found issues
   nnoremap <silent> [s        <cmd>lua vim.diagnostic.hide()<CR>
+
+  nnoremap <silent> Rn        <cmd>lua vim.lsp.buf.rename()<CR>
 
   " not really sure what the point of this is
   nnoremap <silent> <space>q  <cmd>Trouble<CR>
@@ -197,26 +201,22 @@ cmp.setup({
 EOF
 
 lua<<EOF
+local util = require 'lspconfig/util'
+
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
 
-require'lspconfig'.gdscript.setup {
-    capabilities = capabilities,
-    on_attach = on_attach,
-    flags = {
-      debounce_text_changes = 150,
-    }
-}
-require'lspconfig'.clangd.setup {
+local lsp_conf = require('lspconfig')
+
+lsp_conf.clangd.setup {
   capabilities = capabilities,
-  on_attach = on_attach
 }
 EOF
 
 " Treesitter config
 lua <<EOF
 require('nvim-treesitter.configs').setup {
-  ensure_installed = { "bash", "c", "cmake", "css", "go", "gomod", "gowork", "hcl", "help", "html", "http", "javascript", "json", "lua", "make", "markdown", "python", "regex", "rust", "toml", "vim", "yaml", "zig", "gdscript"},
+  ensure_installed = { "bash", "c", "cpp", "cmake", "help", "html", "http", "javascript", "json", "lua", "make", "markdown", "regex", "rust", "toml", "vim", "yaml", "zig", "haskell" },
   highlight = {
     enable = true,
   },
