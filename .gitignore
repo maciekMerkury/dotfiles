@@ -13,13 +13,14 @@
 
 !/alacritty
 
-
 !/ranger
 
 !/tmux
 
 !brave-flags.conf
 !chromium-flags.conf
+
+!bash_aliases
 
 /**/*.log
 /**/.idea/
