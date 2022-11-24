@@ -27,7 +27,7 @@ call plug#begin()
   Plug 'scrooloose/nerdtree'
 
   " brackets and stuff
-  Plug 'max-0406/autoclose.nvim'
+  "Plug 'max-0406/autoclose.nvim'
 
   " syntax highlighting
   Plug 'sheerun/vim-polyglot'
@@ -201,24 +201,43 @@ cmp.setup({
 EOF
 
 lua<<EOF
-local util = require 'lspconfig/util'
-
-local capabilities = vim.lsp.protocol.make_client_capabilities()
-capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
+capabilities = require('cmp_nvim_lsp').default_capabilities()
 
 local lsp_conf = require('lspconfig')
 
 lsp_conf.clangd.setup {
   capabilities = capabilities,
 }
+
+lsp_conf.texlab.setup {
+    capabilities = capabilities,
+        settings = {
+            texlab = {
+                build = {
+                    onSave = true,
+                    args = { '-pdf', '-interaction=nonstopmode', '-synctex=1', '-auxdir=aux', '-outdir=output', '%f' },
+                },
+                forwardSearch = {
+                    executable = 'evince-synctex',
+                    --TODO: this still doesn't fully work
+                },
+                chktex = {
+                    onOpenAndSave = true,
+                    onEdit = true,
+                },
+            }
+    }
+}
+
 EOF
 
 " Treesitter config
 lua <<EOF
 require('nvim-treesitter.configs').setup {
-  ensure_installed = { "bash", "c", "cpp", "cmake", "help", "html", "http", "javascript", "json", "lua", "make", "markdown", "regex", "rust", "toml", "vim", "yaml", "zig", "haskell" },
+  ensure_installed = { "bash", "c", "cpp", "cmake", "help", "json", "lua", "make", "markdown", "regex", "rust", "toml", "vim", "yaml", "zig", "haskell" },
   highlight = {
     enable = true,
+    disable = { "latex" }
   },
   rainbow = {
     enable = true,
